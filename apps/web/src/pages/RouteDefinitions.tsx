@@ -210,32 +210,32 @@ export const routes: RouteDefinition[] = [
   // Refreshed pool routes
   createRouteDefinition({
     path: '/positions/create',
-    getElement: () => <CreatePosition />,
+    getElement: () => <Navigate to="/" replace />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
     nestedPaths: [':protocolVersion'],
   }),
   createRouteDefinition({
     path: '/positions',
-    getElement: () => <Pool />,
+    getElement: () => <Navigate to="/" replace />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
   createRouteDefinition({
     path: '/positions/v2/:chainName/:pairAddress',
-    getElement: () => <V2PositionPage />,
+    getElement: () => <Navigate to="/" replace />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
   createRouteDefinition({
     path: '/positions/v3/:chainName/:tokenId',
-    getElement: () => <PositionPage />,
+    getElement: () => <Navigate to="/" replace />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),
   createRouteDefinition({
     path: '/positions/v4/:chainName/:tokenId',
-    getElement: () => <PositionPage />,
+    getElement: () => <Navigate to="/" replace />,
     getTitle: getPositionPageTitle,
     getDescription: getPositionPageDescription,
   }),

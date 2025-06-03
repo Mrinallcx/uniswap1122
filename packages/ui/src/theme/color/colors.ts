@@ -61,11 +61,11 @@ const accentColors = {
   blueVibrant: '#0047FF',
   blueDark: '#10143D',
 
-  purpleLight: '#FAF5FF',
-  purplePastel: '#E9D8FD',
-  purpleBase: '#9E62FF',
-  purpleVibrant: '#4300B0',
-  purpleDark: '#1A0040',
+  purpleLight: '#A47EFF',
+  purplePastel: '#A47EFF',
+  purpleBase: '#A47EFF',
+  purpleVibrant: '#A47EFF',
+  purpleDark: '#A47EFF',
 }
 
 export const colors = {
@@ -186,12 +186,12 @@ const sporeLight = {
   surface4: 'rgba(19, 19, 19, 0.08)',
   surface5: 'rgba(0,0,0,0.04)',
   surface5Hovered: 'rgba(0,0,0,0.06)',
-  accent1: '#FF37C7',
-  accent1Hovered: '#E500A5',
-  accent2: 'rgba(255, 55, 199, 0.08)',
-  accent2Hovered: 'rgba(255, 55, 199, 0.12)',
-  accent2Solid: '#FFF3FC',
-  accent3: '#222222',
+  accent1: '#A47EFF',
+  accent1Hovered: '#A47EFF',
+  accent2: '#A47EFF',
+  accent2Hovered: '#A47EFF',
+  accent2Solid: '#A47EFF',
+  accent3: '#A47EFF',
   accent3Hovered: colors.black,
 
   DEP_accentSoft: '#FC72FF33', //33 = 20%
@@ -235,13 +235,13 @@ const sporeDark = {
   surface4: 'rgba(255,255,255,0.20)',
   surface5: 'rgba(0,0,0,0.04)',
   surface5Hovered: 'rgba(0,0,0,0.06)',
-  accent1: '#FF37C7',
-  accent1Hovered: '#E500A5',
+  accent1: '#A47EFF',
+  accent1Hovered: '#A47EFF',
 
-  accent2: 'rgba(255, 55, 199, 0.08)',
-  accent2Hovered: 'rgba(255, 55, 199, 0.12)',
-  accent2Solid: '#261621',
-  accent3: colors.white,
+  accent2: '#A47EFF',
+  accent2Hovered: '#A47EFF',
+  accent2Solid: '#A47EFF',
+  accent3: '#A47EFF',
   accent3Hovered: '#F5F5F5',
 
   DEP_accentSoft: '#FC72FF33', //33 = 20%

@@ -71,21 +71,27 @@ export const useTabsContent = (): TabsSection[] => {
       ],
     },
     {
-      title: t('common.pool'),
-      href: '/positions',
-      isActive: pathname.startsWith('/positions'),
-      items: [
-        {
-          label: t('nav.tabs.viewPositions'),
-          href: '/positions',
-          internal: true,
-        },
-        {
-          label: t('nav.tabs.createPosition'),
-          href: '/positions/create',
-          internal: true,
-        },
-      ],
+      title: 'Opus AI',
+      href: '/opus-ai',
+      isActive: pathname.startsWith('/opus-ai'),
     },
+    // Pool section temporarily disabled
+    // {
+    //   title: t('common.pool'),
+    //   href: '/positions',
+    //   isActive: pathname.startsWith('/positions'),
+    //   items: [
+    //     {
+    //       label: t('nav.tabs.viewPositions'),
+    //       href: '/positions',
+    //       internal: true,
+    //     },
+    //     {
+    //       label: t('nav.tabs.createPosition'),
+    //       href: '/positions/create',
+    //       internal: true,
+    //     },
+    //   ],
+    // },
   ]
 }

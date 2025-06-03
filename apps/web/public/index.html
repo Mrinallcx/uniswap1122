@@ -46,9 +46,10 @@
     <!-- Include <link rel="preload"> for js assets so that they are loaded with high priority. -->
     <%= htmlWebpackPlugin.files.js.map((href) => `<link rel="preload" href="${href}" as="script" />`).join('\n    ') %>
    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
       * {
-        font-family: 'Basel', sans-serif;
+        font-family: 'IBM Plex Mono', monospace;
         box-sizing: border-box;
       }
 
@@ -77,7 +78,7 @@
 
       @supports (font-variation-settings: normal) {
         * {
-          font-family: 'Basel', sans-serif;
+          font-family: 'IBM Plex Mono', monospace;
         }
       }
 
@@ -104,7 +105,7 @@
 
       html {
         font-size: 16px;
-        font-weight: 485;
+        font-weight: 400;
         font-variant: none;
         font-smooth: always;
         text-rendering: optimizeLegibility !important;

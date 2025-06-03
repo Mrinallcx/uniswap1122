@@ -76,28 +76,8 @@ const ExploreStatsSection = () => {
     protocolChangePercent.v4,
   ])
 
-  return (
-    <Flex row width="100%">
-      {exploreStatsSectionData.map((data, index) => (
-        <Flex
-          key={data.label}
-          borderLeftWidth={index === 0 ? 0 : '$spacing1'}
-          borderColor="$surface3"
-          pl={index == 0 ? 0 : '$spacing24'}
-          flex={1}
-          cursor={data.protocolPopoverFormattedData ? 'pointer' : 'default'}
-          transition="opacity 0.3s ease, transform 0.3s ease"
-          display={media.md && index > 1 ? 'none' : 'flex'}
-        >
-          {isTouchable || !data.protocolPopoverFormattedData ? (
-            <StatDisplay data={data} isLoading={isStatDataLoading} />
-          ) : (
-            <StatDisplayWithPopover data={data} isLoading={isStatDataLoading} />
-          )}
-        </Flex>
-      ))}
-    </Flex>
-  )
+  // Temporarily hide stats section
+  return null;
 }
 
 export default ExploreStatsSection

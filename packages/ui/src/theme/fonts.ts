@@ -20,16 +20,16 @@ const adjustedSize = (fontSize: number): number => {
 // on web, it's the full family name in the file
 const fontFamilyByPlatform = {
   android: {
-    medium: 'Basel-Grotesk-Medium',
-    book: 'Basel-Grotesk-Book',
+    medium: 'IBM Plex Mono',
+    book: 'IBM Plex Mono',
   },
   ios: {
-    medium: 'Basel Grotesk',
-    book: 'Basel Grotesk',
+    medium: 'IBM Plex Mono',
+    book: 'IBM Plex Mono',
   },
   web: {
-    medium: 'Basel Grotesk Medium',
-    book: 'Basel Grotesk Book',
+    medium: 'IBM Plex Mono',
+    book: 'IBM Plex Mono',
   },
 }
 
@@ -46,11 +46,11 @@ const fontFamily = {
 }
 
 const baselMedium = isWeb
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'IBM Plex Mono, monospace'
   : fontFamily.sansSerif.medium
 
 const baselBook = isWeb
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'IBM Plex Mono, monospace'
   : fontFamily.sansSerif.book
 
 type SansSerifFontFamilyKey = keyof typeof fontFamily.sansSerif
