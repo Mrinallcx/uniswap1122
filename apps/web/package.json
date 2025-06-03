@@ -40,7 +40,8 @@
     "storybook:run:with-tests": "concurrently -s second -n \"SB RUN,SB TEST WATCH\" -c \"magenta,blue\" \"yarn storybook:run --quiet\" \"wait-on tcp:127.0.0.1:6006 -t 600000 && yarn storybook:test --watch\"",
     "storybook:build": "storybook build",
     "storybook:test": "test-storybook --excludeTags=\"no-tests\" --testTimeout 60000",
-    "storybook:test:standalone": "concurrently -k -s first -n \"SB BUILD,SB TEST\" -c \"magenta,blue\" \"yarn storybook:build && http-server storybook-static --port 6006 --silent\" \"wait-on --timeout 600000 tcp:127.0.0.1:6006 && yarn storybook:test --maxWorkers=2\""
+    "storybook:test:standalone": "concurrently -k -s first -n \"SB BUILD,SB TEST\" -c \"magenta,blue\" \"yarn storybook:build && http-server storybook-static --port 6006 --silent\" \"wait-on --timeout 600000 tcp:127.0.0.1:6006 && yarn storybook:test --maxWorkers=2\"",
+    "build": "yarn build:production"
   },
   "husky": {
     "hooks": {
