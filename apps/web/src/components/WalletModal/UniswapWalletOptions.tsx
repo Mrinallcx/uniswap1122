@@ -75,7 +75,7 @@ export function UniswapWalletOptions() {
         ) : !isMobileWeb ? (
           <DownloadWalletOption />
         ) : null}
-        <OptionContainer
+        {/* <OptionContainer
           onPress={() => {
             setPersistHideMobileAppPromoBanner(true)
             connect({
@@ -108,9 +108,9 @@ export function UniswapWalletOptions() {
               </Text>
             </Flex>
           </Flex>
-        </OptionContainer>
+        </OptionContainer> */}
 
-        {isMobileWeb && (
+        {/* {isMobileWeb && (
           // If on a mobile web browser show the relevant app store download link
           <OptionContainer
             onPress={() => {
@@ -141,7 +141,14 @@ export function UniswapWalletOptions() {
               )}
             </Flex>
           </OptionContainer>
-        )}
+        )} */}
+        <Flex mt={16} alignItems="center">
+          <a href="https://www.linkedin.com/in/uxmrinal/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <Text variant="body3" color="$accent1" style={{ fontWeight: 700 }}>
+              Develop & Modified By Mrinal
+            </Text>
+          </a>
+        </Flex>
       </Flex>
     </Flex>
   )

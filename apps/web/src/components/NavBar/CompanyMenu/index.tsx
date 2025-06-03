@@ -54,12 +54,9 @@ export function CompanyMenu() {
           $platform-web={{ containerType: 'normal' }}
         >
           <Flex row alignItems="center" gap="$gap4" onPress={handleLogoClick} data-testid={TestID.NavUniswapLogo}>
-            <NavIcon />
-            {isLargeScreen && (
-              <Text variant="subheading1" color="$accent1" userSelect="none">
-                Uniswap
-              </Text>
-            )}
+            <Text variant="subheading1" color="$accent1" userSelect="none">
+              BharatX
+            </Text>
           </Flex>
           {(media.md || isTouchDevice) && <Hamburger size={22} color="$neutral2" cursor="pointer" ml="16px" />}
           {!media.md && !isTouchDevice && (

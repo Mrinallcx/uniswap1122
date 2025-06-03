@@ -23,6 +23,7 @@ export function DownloadWalletRow({
   const { t } = useTranslation()
   return (
     <TouchableArea onPress={onPress}>
+      {/*
       <Flex
         row
         justifyContent="center"
@@ -36,53 +37,13 @@ export function DownloadWalletRow({
         <Text variant={titleTextVariant} color="$accent1" mr="auto" $md={{ variant: 'buttonLabel3' }}>
           {isMobileWeb ? t('common.getUniswapWallet.mobile') : t('common.getUniswapWallet')}
         </Text>
-        <Trace logPress element={InterfaceElementName.EXTENSION_DOWNLOAD_BUTTON}>
-          <Anchor
-            href={uniswapUrls.chromeExtension}
-            target="_blank"
-            rel="noreferrer"
-            height={iconSize}
-            $md={{ display: 'none' }}
-            onPress={(e) => e.stopPropagation()}
-          >
-            <Wiggle>
-              <Image height={iconSize} source={CHROME_LOGO} width={iconSize} />
-            </Wiggle>
-          </Anchor>
-        </Trace>
-        {(isWebIOS || !isMobileWeb) && (
-          <Trace logPress element={InterfaceElementName.UNISWAP_WALLET_MODAL_DOWNLOAD_BUTTON}>
-            <Anchor
-              href={uniswapUrls.appStoreDownloadUrl}
-              target="_blank"
-              rel="noreferrer"
-              height={iconSize}
-              onPress={(e) => e.stopPropagation()}
-            >
-              <Wiggle>
-                <AppStoreLogo size={iconSize} />
-              </Wiggle>
-            </Anchor>
-          </Trace>
-        )}
-        {(isWebAndroid || !isMobileWeb) && (
-          <Trace logPress element={InterfaceElementName.UNISWAP_WALLET_MODAL_DOWNLOAD_BUTTON}>
-            <Anchor
-              href={uniswapUrls.playStoreDownloadUrl}
-              target="_blank"
-              rel="noreferrer"
-              height={iconSize}
-              onPress={(e) => e.stopPropagation()}
-            >
-              <Wiggle>
-                <Flex backgroundColor="black" p="$spacing2" borderRadius="$rounded4">
-                  <GooglePlayStoreLogo height={iconSize - 4} width={iconSize - 4} />
-                </Flex>
-              </Wiggle>
-            </Anchor>
-          </Trace>
-        )}
         <RightArrow size={iconSize} color="$neutral1" />
+      </Flex>
+      */}
+      <Flex mt={12} alignItems="center">
+        <Text variant="body3" color="$accent1" style={{ fontWeight: 700 }}>
+          Develop & Modified By <a href="https://www.linkedin.com/in/uxmrinal/" target="_blank" rel="noopener noreferrer" style={{ color: '#A47EFF', textDecoration: 'underline' }}>Mrinal</a>
+        </Text>
       </Flex>
     </TouchableArea>
   )

@@ -191,7 +191,8 @@ export default function TokenDetailsPage() {
       </Helmet>
       {(() => {
         if (tokenQuery.loading || !currency) {
-          return <TokenDetailsPageSkeleton />
+          // return <TokenDetailsPageSkeleton />
+          return null
         }
 
         return (

@@ -25,37 +25,38 @@ export const useTabsContent = (): TabsSection[] => {
   const theme = useTheme()
 
   return [
-    {
-      title: t('common.trade'),
-      href: '/swap',
-      isActive: pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send'),
-      items: [
-        {
-          label: t('common.swap'),
-          icon: <SwapV2 fill={theme.neutral2} />,
-          href: '/swap',
-          internal: true,
-        },
-        {
-          label: t('swap.limit'),
-          icon: <Limit fill={theme.neutral2} />,
-          href: '/limit',
-          internal: true,
-        },
-        {
-          label: t('common.send.button'),
-          icon: <Send fill={theme.neutral2} />,
-          href: '/send',
-          internal: true,
-        },
-        {
-          label: t('common.buy.label'),
-          icon: <CreditCardIcon fill={theme.neutral2} />,
-          href: '/buy',
-          internal: true,
-        },
-      ],
-    },
+    // Trade section temporarily disabled
+    // {
+    //   title: t('common.trade'),
+    //   href: '/swap',
+    //   isActive: pathname.startsWith('/swap') || pathname.startsWith('/limit') || pathname.startsWith('/send'),
+    //   items: [
+    //     {
+    //       label: t('common.swap'),
+    //       icon: <SwapV2 fill={theme.neutral2} />,
+    //       href: '/swap',
+    //       internal: true,
+    //     },
+    //     {
+    //       label: t('swap.limit'),
+    //       icon: <Limit fill={theme.neutral2} />,
+    //       href: '/limit',
+    //       internal: true,
+    //     },
+    //     {
+    //       label: t('common.send.button'),
+    //       icon: <Send fill={theme.neutral2} />,
+    //       href: '/send',
+    //       internal: true,
+    //     },
+    //     {
+    //       label: t('common.buy.label'),
+    //       icon: <CreditCardIcon fill={theme.neutral2} />,
+    //       href: '/buy',
+    //       internal: true,
+    //     },
+    //   ],
+    // },
     {
       title: t('common.explore'),
       href: '/explore',

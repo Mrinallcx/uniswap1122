@@ -68,17 +68,16 @@ export const variantEmphasisHash: ButtonStyleLookup = {
   },
   branded: {
     primary: {
-      backgroundColor: '$accent1',
+      backgroundColor: '#A47EFF',
+      borderColor: '#A47EFF',
       hoverStyle: {
-        backgroundColor: '$accent1Hovered',
+        backgroundColor: '#8C5FE6',
+        borderColor: '#8C5FE6',
       },
-      focusVisibleStyle: {
-        backgroundColor: '$accent1Hovered',
-        ...brandedFocusVisibleStyle,
+      pressStyle: {
+        backgroundColor: '#7A4FD1',
+        borderColor: '#7A4FD1',
       },
-      pressStyle: withCommonPressStyle({
-        backgroundColor: '$accent1Hovered',
-      }),
     },
     secondary: {
       backgroundColor: '$accent2',

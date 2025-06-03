@@ -155,7 +155,7 @@ export function Swap({
             <SwapFormContextProvider prefilledState={prefilledState} hideSettings={hideHeader} hideFooter={hideFooter}>
               <Flex position="relative" gap="$spacing16" opacity={isSharedSwapDisabled ? 0.6 : 1}>
                 {isSharedSwapDisabled && <DisabledSwapOverlay />}
-                <UniversalSwapFlow
+                {/* <UniversalSwapFlow
                   hideHeader={hideHeader}
                   hideFooter={hideFooter}
                   syncTabToUrl={syncTabToUrl}
@@ -163,7 +163,7 @@ export function Swap({
                   onCurrencyChange={onCurrencyChange}
                   prefilledState={prefilledState}
                   tokenColor={tokenColor}
-                />
+                /> */}
               </Flex>
             </SwapFormContextProvider>
           </PrefetchBalancesWrapper>
@@ -258,6 +258,7 @@ function UniversalSwapFlow({
 
   return (
     <Flex>
+      {/*
       {!hideHeader && (
         <Flex row gap="$spacing16">
           <SegmentedControl
@@ -270,6 +271,7 @@ function UniversalSwapFlow({
           />
         </Flex>
       )}
+      */}
       {currentTab === SwapTab.Swap && (
         <Flex gap="$spacing16">
           <SwapDependenciesContextProvider swapCallback={swapCallback} wrapCallback={wrapCallback}>

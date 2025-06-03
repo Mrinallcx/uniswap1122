@@ -109,7 +109,7 @@ export const routes: RouteDefinition[] = [
     getTitle: () => StaticTitlesAndDescriptions.UniswapTitle,
     getDescription: () => StaticTitlesAndDescriptions.SwapDescription,
     getElement: (args) => {
-      return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
+      return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Navigate to="/explore/tokens" replace />
     },
   }),
   createRouteDefinition({
@@ -179,32 +179,32 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/buy',
-    getElement: () => <Swap />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => StaticTitlesAndDescriptions.SwapTitle,
   }),
   createRouteDefinition({
     path: '/send',
-    getElement: () => <Swap />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => i18n.t('title.sendTokens'),
   }),
   createRouteDefinition({
     path: '/limits',
-    getElement: () => <Navigate to="/limit" replace />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => i18n.t('title.placeLimit'),
   }),
   createRouteDefinition({
     path: '/limit',
-    getElement: () => <Swap />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => i18n.t('title.placeLimit'),
   }),
   createRouteDefinition({
     path: '/buy',
-    getElement: () => <Swap />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => StaticTitlesAndDescriptions.SwapTitle,
   }),
   createRouteDefinition({
     path: '/swap',
-    getElement: () => <Swap />,
+    getElement: () => <Navigate to="/explore/tokens" replace />,
     getTitle: () => StaticTitlesAndDescriptions.SwapTitle,
   }),
   // Refreshed pool routes

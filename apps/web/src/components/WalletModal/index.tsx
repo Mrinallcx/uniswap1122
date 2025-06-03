@@ -78,7 +78,9 @@ export default function WalletModal() {
       </Flex>
       {isEmbeddedWalletEnabled ? (
         <Flex justifyContent="center" alignItems="center" py={8}>
-          <UniswapLogo size={48} color="$accent1" />
+          <Text variant="heading3" color="$accent1" userSelect="none">
+            BharatX
+          </Text>
         </Flex>
       ) : (
         <UniswapWalletOptions />
@@ -126,13 +128,14 @@ export default function WalletModal() {
               )}
             {connectors.map((c, index) => (
               <>
-                <Option connectorId={c.id} key={c.uid} detected={c.isInjected} />
+                {/* {c.id === CONNECTION_PROVIDER_IDS.EMBEDDED_WALLET_CONNECTOR_ID ? null : */}
+                {c.id === CONNECTION_PROVIDER_IDS.EMBEDDED_WALLET_CONNECTOR_ID ? null : <Option connectorId={c.id} key={c.uid} detected={c.isInjected} />}
                 {index < connectors.length - 1 || isEmbeddedWalletEnabled ? <Separator /> : null}
               </>
             ))}
-            {isEmbeddedWalletEnabled && !isMobileWeb && (
+            {/* {isEmbeddedWalletEnabled && !isMobileWeb && (
               <Option connectorId={AlternativeOption.OTHER_WALLETS} onPress={() => setMenu(MenuState.OTHER_WALLETS)} />
-            )}
+            )} */}
           </Flex>
         </Flex>
         <Flex gap="$gap8">

@@ -89,7 +89,9 @@ export default function Navbar() {
     <Nav>
       <UnpositionedFlex row centered width="100%">
         <Left>
-          <CompanyMenu />
+          <a href="/explore/tokens" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '8px' }}>
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontWeight: 700, fontSize: '1.5rem', color: '#A47EFF' }}>BharatX</span>
+          </a>
           {areTabsVisible && <Tabs />}
         </Left>
 
@@ -97,11 +99,9 @@ export default function Navbar() {
 
         <Right>
           {collapseSearchBar && <SearchBar maxHeight={NAV_SEARCH_MAX_HEIGHT} fullScreen={isSmallScreen} />}
-          {!isEmbeddedWalletEnabled && isLandingPage && !isSmallScreen && <NewUserCTAButton />}
           {!account.isConnected && !account.isConnecting && <PreferenceMenu />}
           {!hideChainSelector && <ChainSelector />}
           {isTestnetModeEnabled && <TestnetModeTooltip />}
-          {isEmbeddedWalletEnabled && !account.address && <NewUserCTAButton />}
           <Web3Status />
         </Right>
       </UnpositionedFlex>

@@ -20,7 +20,7 @@ const Badge = styled(Text, {
 
   variants: {
     badgeVariant: {
-      [BadgeVariant.SOFT]: { backgroundColor: '$accent2', color: '$accent1' },
+      [BadgeVariant.SOFT]: { backgroundColor: 'transparent', color: '#A47EFF' },
       [BadgeVariant.WARNING]: { backgroundColor: '$statusWarning', color: '$surface1' },
     },
     size: {

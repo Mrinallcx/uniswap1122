@@ -84,7 +84,8 @@ function getIcon({
   const iconSize = isEmbeddedWalletEnabled ? iconSizes.icon32 : iconSizes.icon40
 
   if (connectorId === CONNECTION_PROVIDER_IDS.EMBEDDED_WALLET_CONNECTOR_ID) {
-    return <EmbeddedWalletIcon />
+    // return <EmbeddedWalletIcon />
+    return null
   } else if (connectorId === CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID) {
     return <UniswapMobileIcon iconSize={iconSize} />
   } else if (connectorId === AlternativeOption.OTHER_WALLETS) {

@@ -74,32 +74,32 @@ export const EmptyWallet = ({
 
   const options: ActionCardItem[] = useMemo(
     () => [
-      {
-        title: t('home.tokens.empty.action.buy.title'),
-        blurb: t('home.tokens.empty.action.buy.description'),
-        elementName: ElementName.EmptyStateBuy,
-        icon: <BuyIcon color="$accent1" size="$icon.28" />,
-        onPress: handleBuyCryptoClick,
-        BackgroundImageWrapperCallback,
-      },
-      {
-        title: t('home.empty.transfer'),
-        blurb: t('home.empty.transfer.description'),
-        elementName: ElementName.EmptyStateReceive,
-        icon: <ArrowDownCircle color="$accent1" size="$icon.28" />,
-        onPress: handleReceiveCryptoClick,
-      },
-      ...(providers.length > 0
-        ? [
-            {
-              title: t('home.empty.cexTransfer'),
-              blurb: t('home.empty.cexTransfer.description'),
-              elementName: ElementName.EmptyStateCEXTransfer,
-              icon: <CEXTransferLogo providers={providers} />,
-              onPress: handleCEXTransferClick,
-            },
-          ]
-        : []),
+      // {
+      //   title: t('home.tokens.empty.action.buy.title'),
+      //   blurb: t('home.tokens.empty.action.buy.description'),
+      //   elementName: ElementName.EmptyStateBuy,
+      //   icon: <BuyIcon color="$accent1" size="$icon.28" />, 
+      //   onPress: handleBuyCryptoClick,
+      //   BackgroundImageWrapperCallback,
+      // },
+      // {
+      //   title: t('home.empty.transfer'),
+      //   blurb: t('home.empty.transfer.description'),
+      //   elementName: ElementName.EmptyStateReceive,
+      //   icon: <ArrowDownCircle color="$accent1" size="$icon.28" />, 
+      //   onPress: handleReceiveCryptoClick,
+      // },
+      // ...(providers.length > 0
+      //   ? [
+      //       {
+      //         title: t('home.empty.cexTransfer'),
+      //         blurb: t('home.empty.cexTransfer.description'),
+      //         elementName: ElementName.EmptyStateCEXTransfer,
+      //         icon: <CEXTransferLogo providers={providers} />, 
+      //         onPress: handleCEXTransferClick,
+      //       },
+      //     ]
+      //   : []),
     ],
     [
       providers,
@@ -114,6 +114,7 @@ export const EmptyWallet = ({
   return (
     <Flex gap="$spacing20">
       <Separator />
+      {/*
       <Flex>
         <Text variant="subheading2" color="$neutral1">
           <Trans i18nKey="onboarding.welcome.title" />
@@ -122,6 +123,7 @@ export const EmptyWallet = ({
           <Trans i18nKey="home.tokens.empty.welcome.description" />
         </Text>
       </Flex>
+      */}
       <Flex gap="$spacing12">
         {options.map((option) => (
           <ActionCard

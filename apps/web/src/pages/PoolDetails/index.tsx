@@ -226,14 +226,14 @@ export default function PoolDetailsPage() {
           </LeftColumn>
           <Flex gap="$spacing24" width={360} $xl={{ width: '100%', mt: 44, minWidth: 'unset' }}>
             <Flex $xl={{ marginTop: -24 }}>
-              <PoolDetailsStatsButtons
+              {/* <PoolDetailsStatsButtons
                 chainId={chainInfo?.id}
                 token0={token0}
                 token1={token1}
                 feeTier={poolData?.feeTier}
                 protocolVersion={poolData?.protocolVersion}
                 loading={loading}
-              />
+              /> */}
             </Flex>
             {poolData && (
               <PoolDetailsApr
