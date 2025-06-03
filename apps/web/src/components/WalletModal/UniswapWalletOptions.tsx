@@ -73,7 +73,8 @@ export function UniswapWalletOptions() {
             <DetectedBadge />
           </OptionContainer>
         ) : !isMobileWeb ? (
-          <DownloadWalletOption />
+          // <DownloadWalletOption />
+          null
         ) : null}
         {/* <OptionContainer
           onPress={() => {
