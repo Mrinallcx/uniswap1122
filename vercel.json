@@ -1,6 +1,6 @@
 {
-  "buildCommand": "yarn install && yarn g:build",
-  "installCommand": "yarn install --frozen-lockfile",
+  "buildCommand": "yarn install --network-timeout 100000 && yarn g:build",
+  "installCommand": "yarn install --network-timeout 100000",
   "outputDirectory": "apps/web/build",
   "rewrites": [
     {
