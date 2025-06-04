@@ -122,7 +122,6 @@ const BannerContentContainerMobile = styled(Flex, {
 })
 
 export function LPIncentiveAnnouncementBanner() {
-  // Always return null to disable the banner
   return null
 }
 
