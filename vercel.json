@@ -1,5 +1,6 @@
 {
-  "buildCommand": "yarn g:build",
+  "buildCommand": "yarn install && yarn g:build",
+  "installCommand": "yarn install --frozen-lockfile",
   "outputDirectory": "apps/web/build",
   "rewrites": [
     {
