@@ -1,4 +1,6 @@
 {
+  "buildCommand": "yarn g:build",
+  "outputDirectory": "apps/web/build",
   "rewrites": [
     {
       "source": "/(.*)",
