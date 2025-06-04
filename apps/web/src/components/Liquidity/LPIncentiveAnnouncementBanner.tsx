@@ -122,7 +122,23 @@ const BannerContentContainerMobile = styled(Flex, {
 })
 
 export function LPIncentiveAnnouncementBanner() {
-  return null
+  const [hidden, setHidden] = useState(true)
+
+  useEffect(() => {
+    const hasSeenBanner = localStorage.getItem(LP_INCENTIVE_BANNER_STORAGE_KEY) !== null
+    setHidden(hasSeenBanner)
+  }, [])
+
+  const handleClose = () => {
+    setHidden(true)
+    localStorage.setItem(LP_INCENTIVE_BANNER_STORAGE_KEY, 'true')
+  }
+
+  if (hidden) {
+    return null
+  }
+
+  return isMobileWeb ? <MobileBanner handleClose={handleClose} /> : <DesktopBanner handleClose={handleClose} />
 }
 
 function DesktopBanner({ handleClose }: { handleClose: () => void }) {
