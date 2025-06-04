@@ -286,7 +286,7 @@ export default function Pool() {
         $lg={{ px: '$spacing20' }}
       >
         <Flex grow shrink gap="$spacing24" maxWidth={700} $xl={{ maxWidth: '100%' }}>
-          {isLPIncentivesEnabled && (
+          {/* {isLPIncentivesEnabled && (
             <LpIncentiveRewardsCard
               walletAddress={account.address}
               onCollectRewards={() => {
@@ -296,7 +296,7 @@ export default function Pool() {
               setTokenRewards={setTokenRewards}
               initialHasCollectedRewards={hasCollectedRewards}
             />
-          )}
+          )} */}
           <Flex row justifyContent="space-between" alignItems="center" mt={isLPIncentivesEnabled ? '$spacing28' : 0}>
             <PositionsHeader
               showFilters={account.isConnected}
@@ -415,7 +415,7 @@ export default function Pool() {
           </Flex>
         </Flex>
       </Flex>
-      {isLPIncentivesEnabled && (
+      {/* {isLPIncentivesEnabled && (
         <LpIncentiveClaimModal
           isOpen={isModalOpen}
           onClose={() => closeModal()}
@@ -429,7 +429,7 @@ export default function Pool() {
           isPendingTransaction={isPendingTransaction}
           iconUrl={tokenLogo}
         />
-      )}
+      )} */}
     </Trace>
   )
 }
