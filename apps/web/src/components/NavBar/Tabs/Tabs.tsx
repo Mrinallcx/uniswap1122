@@ -69,7 +69,14 @@ const Tab = ({
   }, [popoverRef])
   useEffect(() => closeMenu(), [location, closeMenu])
 
-  const Label = (
+  const isExternalLink = path.startsWith('http')
+  const Label = isExternalLink ? (
+    <a href={path} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+      <TabText variant="subheading1" isActive={isActive || isOpen}>
+        {label}
+      </TabText>
+    </a>
+  ) : (
     <NavLink to={path} style={{ textDecoration: 'none' }}>
       <TabText variant="subheading1" isActive={isActive || isOpen}>
         {label}

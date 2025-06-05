@@ -73,7 +73,7 @@ export const useTabsContent = (): TabsSection[] => {
     },
     {
       title: 'Opus AI',
-      href: '/opus-ai',
+      href: 'https://tryooopus.vercel.app/',
       isActive: pathname.startsWith('/opus-ai'),
     },
     // Pool section temporarily disabled
